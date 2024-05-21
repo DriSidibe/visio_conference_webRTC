@@ -1,0 +1,16 @@
+{% extends 'classroom/base.html' %}
+{% load static %}
+{% block content %}
+
+{% for vc in  video_conferences%}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title
+            ">{{ vc.teacher.name }}</h5>
+            <p class="card-text">{{ vc.description }}</p>
+            <a href="http://localhost:3000/?type=join&room={{vc.link}}" class="btn btn-primary">Join</a>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

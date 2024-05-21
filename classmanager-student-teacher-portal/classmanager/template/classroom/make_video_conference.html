@@ -1,0 +1,16 @@
+{% extends 'classroom/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center">Make a video conference</h2>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Make a video conference</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
